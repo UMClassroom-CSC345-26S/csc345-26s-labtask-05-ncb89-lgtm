@@ -7,9 +7,13 @@
      <TD WIDTH=10%> /4.0
 <TR> <TD COLSPAN=4> &nbsp;
 <TR> <TH ALIGN=LEFT COLSPAN=4> LC in PRP - 1.5
-<TR> <TD WIDTH=40%> Challenge 1 (yes)
-     <TD WIDTH=10%> [1.0]
-     <TD WIDTH=40%> Challenge 2 (no)
+<TR> <TD WIDTH=40%> Challenge 1 answer
+     <TD WIDTH=10%> [0.25]
+     <TD WIDTH=40%> Challenge 2 answer
+     <TD WIDTH=10%> [0.25]    
+<TR> <TD WIDTH=40%> Challenge 1 truth table
+     <TD WIDTH=10%> [0.5]
+     <TD WIDTH=40%> Challenge 2 truth table
      <TD WIDTH=10%> [0.5]    
 
 <TR> <TD COLSPAN=4> &nbsp;
@@ -26,7 +30,7 @@
      <TD WIDTH=10%> [0.25]
      <TD WIDTH=40%> Non-SUMO relationships
      <TD WIDTH=10%> [0.5]
-<TD> <TD WIDTH=40%> Knowledge graph
+<TR> <TD WIDTH=40%> Knowledge graph
      <TD WIDTH=10%> [0.5]
 </TABLE>
 
