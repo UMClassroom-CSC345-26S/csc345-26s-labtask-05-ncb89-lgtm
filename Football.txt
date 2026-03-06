@@ -1,76 +1,56 @@
-====================================================================
-ONTOLOGICAL KNOWLEDGE GRAPH - FOOTBALL.TXT
-2026 CFP National Championship
-====================================================================
+Domain facts
 
---------------------------------------------------------------------
-SECTION 1: DOMAIN FACTS (Thing - Relationship - Thing)
---------------------------------------------------------------------
+Miami_Hurricanes lost CFPNC_2026
+Indiana_Hoosiers won CFPNC_2026
+20_January_2026 is_date CFPNC_2026
+27 winning_score CFPNC_2026
+21 losing_score CFPNC_2026
+Carson_Beck played_in CFPNC_2026
+Carson_Beck member Miami_Hurricanes
+Carson_Beck instance Man
 
-CFPNC_2026        lost_by          Miami_Hurricanes
-CFPNC_2026        won_by           Indiana_Hoosiers
-CFPNC_2026        is_date          20_January_2026
-CFPNC_2026        winning_score    27
-CFPNC_2026        losing_score     21
-Carson_Beck       played_in        CFPNC_2026
-Carson_Beck       member           Miami_Hurricanes
-Carson_Beck       instance         Man
+Instance of
 
---------------------------------------------------------------------
-SECTION 2: INSTANCE / SUBCLASS CONNECTIONS TO SUMO
---------------------------------------------------------------------
+CFPNC_2026 instance FootballUS
+Miami_Hurricanes instance SportsTeam
+Indiana_Hoosiers instance SportsTeam
+20_January_2026 instance Day
+27 instance NonnegativeInteger
+21 instance NonnegativeInteger
+Carson_Beck instance Man
 
-CFPNC_2026        instance         FootballUS
-Miami_Hurricanes  instance         SportsTeam
-Indiana_Hoosiers  instance         SportsTeam
-20_January_2026   instance         Day
-27                instance         NonnegativeInteger
-21                instance         NonnegativeInteger
-Carson_Beck       instance         Man
+Subclass chains (all go to Entity at the top)
 
---------------------------------------------------------------------
-SECTION 3: SUMO SUBCLASS HIERARCHIES (all ending at Entity)
---------------------------------------------------------------------
+FootballUS subclass TeamSport
+TeamSport subclass Sport
+Sport subclass RecreationOrExercise
+RecreationOrExercise subclass Process
+Process subclass Physical
+Physical subclass Entity
 
---- 3a. FootballUS → Entity ---
-FootballUS        subclass         TeamSport
-TeamSport         subclass         Sport
-Sport             subclass         RecreationOrExercise
-RecreationOrExercise subclass      Process
-Process           subclass         Physical
-Physical          subclass         Entity
+SportsTeam subclass Organization
+Organization subclass Agent
+Agent subclass Object
+Object subclass Physical
+Physical subclass Entity
 
---- 3b. SportsTeam → Entity ---
-SportsTeam        subclass         Organization
-Organization      subclass         Agent
-Agent             subclass         Object
-Object            subclass         Physical
-Physical          subclass         Entity
+Day subclass TimeDuration
+TimeDuration subclass TimeInterval
+TimeInterval subclass TimeMeasure
+TimeMeasure subclass Abstract
+Abstract subclass Entity
 
---- 3c. Day → Entity ---
-Day               subclass         TimeDuration
-TimeDuration      subclass         TimeInterval
-TimeInterval      subclass         TimeMeasure
-TimeMeasure       subclass         Abstract
-Abstract          subclass         Entity
+NonnegativeInteger subclass Integer
+Integer subclass RationalNumber
+RationalNumber subclass RealNumber
+RealNumber subclass Number
+Number subclass Quantity
+Quantity subclass Abstract
+Abstract subclass Entity
 
---- 3d. NonnegativeInteger → Entity ---
-NonnegativeInteger subclass        Integer
-Integer           subclass         RationalNumber
-RationalNumber    subclass         RealNumber
-RealNumber        subclass         Number
-Number            subclass         Quantity
-Quantity          subclass         Abstract
-Abstract          subclass         Entity
-
---- 3e. Man → Entity ---
-Man               subclass         Human
-Human             subclass         Animal
-Animal            subclass         Organism
-Organism          subclass         Object
-Object            subclass         Physical
-Physical          subclass         Entity
-
-====================================================================
-END OF FILE
-====================================================================
+Man subclass Human
+Human subclass Animal
+Animal subclass Organism
+Organism subclass Object
+Object subclass Physical
+Physical subclass Entity
